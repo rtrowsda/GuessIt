@@ -92,17 +92,25 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-40%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Resources\Images\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="BullsEyeViewController.xib" />
-    <InterfaceDefinition Include="InfoViewController.xib" />
     <InterfaceDefinition Include="TileViewController.xib" />
   </ItemGroup>
   <ItemGroup>
@@ -120,14 +128,33 @@
     <Compile Include="BullsEyeViewController.designer.cs">
       <DependentUpon>BullsEyeViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoViewController.cs" />
-    <Compile Include="InfoViewController.designer.cs">
-      <DependentUpon>InfoViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="TileViewController.cs" />
     <Compile Include="TileViewController.designer.cs">
       <DependentUpon>TileViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TileGameViewController.cs" />
+    <Compile Include="TileGameViewController.designer.cs">
+      <DependentUpon>TileGameViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TileLevel.txt" />
+    <BundleResource Include="Resources\BullsEye.txt" />
+    <BundleResource Include="Resources\BullsEyeInfo.html" />
+    <BundleResource Include="Resources\TileInfo.html" />
+    <BundleResource Include="Resources\Images\Bull_Background.png" />
+    <BundleResource Include="Resources\Images\nobomb.png" />
+    <BundleResource Include="Resources\Images\SliderThumb-Highlighted%402x.png" />
+    <BundleResource Include="Resources\Images\SliderThumb-Normal%402x.png" />
+    <BundleResource Include="Resources\Images\tile.png" />
+    <BundleResource Include="Resources\Images\bomb.png" />
+    <BundleResource Include="Resources\Images\Tile_Background.png" />
+    <BundleResource Include="Resources\Images\home.png" />
+    <BundleResource Include="Resources\Images\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="Resources\Images\iTunesArtwork" />
+    <ITunesArtwork Include="Resources\Images\iTunesArtwork%402x" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

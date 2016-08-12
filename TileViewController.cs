@@ -1,33 +1,46 @@
-﻿using System;
-
+using Foundation;
+using System;
 using UIKit;
 
 namespace GuessIt
 {
-	public partial class TileViewController : UIViewController
+    public partial class TileViewController : UIViewController
 	{
-		public TileViewController() : base("TileViewController", null)
-		{
-		}
 
-		partial void UIButtongZPiGOdf_TouchUpInside(UIButton sender)
+		#region background app functions
+		partial void ShowHideInfo(UIButton sender)
+		{
+			if (WebView1.Hidden == true)
+				WebView1.Hidden = false;
+			else
+				WebView1.Hidden = true;
+		}
+		public void SetWeb()
+		{
+			WebView1.LoadRequest(new NSUrlRequest(new NSUrl("TileInfo.html", false)));
+			WebView1.ScalesPageToFit = false;
+		}
+		partial void DismissView(UIButton sender)
 		{
 			DismissViewController(true, completionHandler: null);
+		}
+		#endregion
+
+
+		#region Basic app functions
+		public TileViewController (IntPtr handle) : base (handle)
+        {
+        }
+
+		public TileViewController()
+		{
 		}
 
 		public override void ViewDidLoad()
 		{
+			SetWeb();
 			base.ViewDidLoad();
-			// Perform any additional setup after loading the view, typically from a nib.
 		}
-
-
-		public override void DidReceiveMemoryWarning()
-		{
-			base.DidReceiveMemoryWarning();
-			// Release any cached data, images, etc that aren't in use.
-		}
-	}
+		#endregion
+    }
 }
-
-
